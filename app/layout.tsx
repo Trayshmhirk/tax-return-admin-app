@@ -12,7 +12,16 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <body className="">{children}</body>
+         <body className="min-h-screen flex content-center">
+            <div className="w-full flex overflow-hidden">
+               <aside className="">Sidebar</aside>
+
+               <main className="flex flex-col gap-1">
+                  <h1>Main</h1>
+                  {children}
+               </main>
+            </div>
+         </body>
       </html>
    );
 }
